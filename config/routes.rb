@@ -1,3 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # A home page listing flats
+  # verb '/path', to: 'controller#action', as: :prefix
+  root to: 'flats#index'
+
+  # :id is available in the params
+  get '/flats/:id', to: 'flats#show', as: :flat
 end
+
+
+# index => list all
+# show => show one
+
+# We'll cover these Tuesday:
+# new/create => creating
+# edit/update => updating
+# destroy => delete
